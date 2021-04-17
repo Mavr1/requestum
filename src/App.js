@@ -1,26 +1,15 @@
 import React from 'react';
 
+import Header from './components/Header/Header';
+import Search from './components/Search/Search';
+import './styles/app.global.scss';
+
 function App() {
   return (
     <div className="App">
-      <header>
-        <div>
-          <img src="./public/logo192.png" alt="site logo" />
-          <div>
-            <p>requestum</p>
-            <p>web development company</p>
-          </div>
-        </div>
-        <p>Github users search app</p>
-      </header>
+      <Header />
       <aside>
-        <div>
-          <input></input>
-        </div>
-        <div>
-          <h3>Search history</h3>
-          <ul></ul>
-        </div>
+        <Search />
       </aside>
       <main>
         <section>

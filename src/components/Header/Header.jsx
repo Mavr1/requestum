@@ -5,7 +5,12 @@ const Header = () => {
   return (
     <header className={styles.container}>
       <div className={styles.logoWrapper}>
-        <img src="./public/logo192.png" alt="site logo" width={60} />
+        <img
+          src="./logo192.png"
+          alt="site logo"
+          width={60}
+          className={styles.logo}
+        />
         <div>
           <p className={[styles.name, styles.color].join(' ')}>requestum</p>
           <p className={[styles.title, styles.color].join(' ')}>

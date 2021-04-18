@@ -2,8 +2,11 @@ import { createSlice } from '@reduxjs/toolkit';
 
 export const searchSlice = createSlice({
   name: 'search',
-  initialState: null,
+  initialState: [],
   reducers: {
-    setSearch: (state, { payload }) => payload,
+    addSearchQuery: (state, { payload }) => {
+      state.unshift({ id: Date.now().toString(), value: payload });
+      state.length = state.length > 5 ? 5 : state.length;
+    },
   },
 });

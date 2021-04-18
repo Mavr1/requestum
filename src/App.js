@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Header from './components/Header/Header';
+import ResultsList from './components/ResultsList/ResultsList';
 import Search from './components/Search/Search';
 import './styles/app.global.scss';
 
@@ -12,9 +13,7 @@ function App() {
         <Search />
       </aside>
       <main>
-        <section>
-          <ul></ul>
-        </section>
+        <ResultsList />
       </main>
     </div>
   );

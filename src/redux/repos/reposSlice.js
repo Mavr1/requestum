@@ -5,5 +5,7 @@ export const reposSlice = createSlice({
   initialState: null,
   reducers: {
     setRepos: (state, { payload }) => payload,
+
+    clearRepos: () => [],
   },
 });

@@ -5,5 +5,7 @@ export const usersSlice = createSlice({
   initialState: null,
   reducers: {
     setUsers: (state, { payload }) => payload,
+
+    clearUsers: () => [],
   },
 });

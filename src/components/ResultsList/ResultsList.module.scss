@@ -1,0 +1,44 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.container {
+  @include for-tablet-up {
+    display: flex;
+  }
+}
+
+.section {
+  margin-bottom: 20px;
+
+  @include for-tablet-up {
+    flex: 1;
+  }
+}
+
+.section:not(:last-child) {
+  @include for-tablet-up {
+    margin-right: 15px;
+  }
+}
+
+.heading {
+  color: $accent-color;
+  font-family: sans-serif;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.list {
+  margin-bottom: 15px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  max-width: 320px;
+}
+
+.paginationControl {
+  color: $accent-color;
+  cursor: pointer;
+}

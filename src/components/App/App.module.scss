@@ -1,0 +1,44 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.container {
+  width: 320px;
+  padding: 15px 20px;
+  margin: 0 auto;
+  background-color: $main-color;
+
+  @include for-tablet-up {
+    width: 660px;
+  }
+
+  @include for-desktop-up {
+    width: 1140px;
+  }
+}
+
+.wrapper {
+  padding: 20px 0;
+  @include for-tablet-up {
+    display: flex;
+  }
+}
+
+.asideWrapper {
+  padding-bottom: 40px;
+
+  @include for-tablet-up {
+    flex: 1;
+    padding-top: 38px;
+    margin-right: 15px;
+  }
+}
+
+.mainWrapper {
+  @include for-tablet-up {
+    flex: 3;
+  }
+
+  @include for-desktop-up {
+    flex: 4;
+  }
+}

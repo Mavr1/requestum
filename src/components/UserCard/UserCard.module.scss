@@ -1,0 +1,21 @@
+.container {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  word-break: break-word;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.login {
+  word-wrap: break-word;
+}

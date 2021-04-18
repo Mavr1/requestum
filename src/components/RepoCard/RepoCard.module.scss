@@ -1,0 +1,18 @@
+.container {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  word-break: break-word;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.heading {
+  margin-bottom: 12px;
+}
+
+.text {
+  margin-bottom: 8px;
+}

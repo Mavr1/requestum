@@ -8,6 +8,8 @@ import RepoCard from '../RepoCard/RepoCard';
 import UserCard from '../UserCard/UserCard';
 import { getRepos } from '../../redux/repos/reposOpertations';
 import { getUsers } from '../../redux/users/usersOpertations';
+import styles from './ResultsList.module.scss';
+import { paginationProps } from '../../services/helpers';
 
 const ResultsList = () => {
   const dispatch = useDispatch();
@@ -23,9 +25,10 @@ const ResultsList = () => {
   };
 
   return (
-    <>
-      <section>
-        <ul>
+    <div className={styles.container}>
+      <section className={styles.section}>
+        <h2 className={styles.heading}>Users</h2>
+        <ul className={styles.list}>
           {users?.items?.map(({ login, id, avatar_url, html_url }) => (
             <UserCard
               key={id}
@@ -37,14 +40,13 @@ const ResultsList = () => {
         </ul>
         <Pagination
           total={users?.total_count}
-          defaultCurrent={1}
-          defaultPageSize={5}
           onChange={handlePaginate('users')}
-          showSizeChanger
+          {...paginationProps}
         />
       </section>
-      <section>
-        <ul>
+      <section className={styles.section}>
+        <h2 className={styles.heading}>Repositories</h2>
+        <ul className={styles.list}>
           {repos?.items?.map(
             ({ full_name, id, description, html_url, language }) => (
               <RepoCard
@@ -59,12 +61,11 @@ const ResultsList = () => {
         </ul>
         <Pagination
           total={repos?.total_count}
-          defaultCurrent={1}
-          defaultPageSize={5}
           onChange={handlePaginate('repos')}
+          {...paginationProps}
         />
       </section>
-    </>
+    </div>
   );
 };
 

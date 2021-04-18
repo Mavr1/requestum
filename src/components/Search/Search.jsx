@@ -9,6 +9,7 @@ import { searchSlice } from '../../redux/search/searchSlice';
 import { getUsers } from '../../redux/users/usersOpertations';
 import { usersSlice } from '../../redux/users/usersSlice';
 import { reposSlice } from '../../redux/repos/reposSlice';
+import styles from './Search.module.scss';
 
 const Search = () => {
   const dispatch = useDispatch();
@@ -65,19 +66,22 @@ const Search = () => {
   }, [inputValue, setDebouncedValue]);
 
   return (
-    <section>
-      <div>
+    <section className={styles.container}>
+      <div className={styles.inputWrapper}>
         <input
+          className={styles.input}
           value={inputValue}
           onChange={handleInputChange}
           placeholder="Input your query"
         ></input>
       </div>
       <div>
-        <h3>Search history</h3>
+        <h3 className={[styles.heading, styles.text].join(' ')}>Search history</h3>
         <ul>
           {searchHistory.map(({ id, value }) => (
-            <li key={id}>{value}</li>
+            <li key={id} className={styles.text}>
+              {value}
+            </li>
           ))}
         </ul>
       </div>

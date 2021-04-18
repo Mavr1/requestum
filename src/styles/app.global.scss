@@ -1,0 +1,12 @@
+@import './normalize.scss';
+@import './variables.scss';
+
+.rc-pagination-item {
+  color: $accent-color;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.rc-pagination-item-active {
+  text-decoration: underline;
+}

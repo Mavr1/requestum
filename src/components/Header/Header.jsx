@@ -3,15 +3,19 @@ import styles from './Header.module.scss';
 
 const Header = () => {
   return (
-    <header>
+    <header className={styles.container}>
       <div className={styles.logoWrapper}>
-        <img src="./public/logo192.png" alt="site logo" />
+        <img src="./public/logo192.png" alt="site logo" width={60} />
         <div>
-          <p>requestum</p>
-          <p>web development company</p>
+          <p className={[styles.name, styles.color].join(' ')}>requestum</p>
+          <p className={[styles.title, styles.color].join(' ')}>
+            web development company
+          </p>
         </div>
       </div>
-      <p>Github users search app</p>
+      <p className={[styles.description, styles.color].join(' ')}>
+        Github users search app
+      </p>
     </header>
   );
 };
